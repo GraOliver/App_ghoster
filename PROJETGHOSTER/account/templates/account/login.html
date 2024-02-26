@@ -6,7 +6,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static "account/css/main.css"%}'>
+    <link rel='stylesheet' type='text/css' media='screen' href='{% static "global.css"%}'>
     <script src='main.js'></script>
 </head>
 <body>
@@ -14,20 +15,21 @@
         {%csrf_token%}
         <div class="">
             <div class=" champ">
-                <label for="username">Nom d'utilisateur</label><input type="text" name="username" id="">
-                <label for="password">Mot de passe</label><input type="password" name="password" id="">
+                <label for="username">Nom d'utilisateur : </label><input type="text" name="username" id="">
+                <label for="password">Mot de passe : </label><input type="password" name="password" id="">
             </div>
             <div>
                 <span>
                      <!-- message d'erreur en cas de faut compte -->
                      {% for message in messages %}
-                        message
+                        {{message}}
                      {% endfor%}
                 </span>
             </div>
             <div>
-                <input type="submit" value="Connexion" class="">
+                <input type="submit" value="Connexion" class="bouton">
             </div>
+            
         </div>
     </form>
 </body>
