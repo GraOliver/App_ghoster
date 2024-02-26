@@ -13,7 +13,7 @@ def login_app(request): # connexion du client
         user =authenticate(request,username=username,password =password) # verification des valeur entrer par
         
         if user is not None :
-            return redirect("application:index")
+            return redirect("app:index")
         else :
             messages.info(request,message_erreur)    
             
