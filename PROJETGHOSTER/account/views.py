@@ -28,3 +28,5 @@ def logout_app(request):
 def register_app(request):
     pass
 
+def pass_forgeted(request):
+    pass

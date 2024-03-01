@@ -11,6 +11,14 @@
     <script src='main.js'></script>
 </head>
 <body>
+    <div class="garde">
+        <div>
+            <a href="{% url 'account:register_app' %}">Créer un compte</a>
+        </div>
+        <div>
+            <a href="#">sign in</a>
+        </div>
+    </div>
     <form action="" method="post">
         {%csrf_token%}
         <div class="">
@@ -23,6 +31,7 @@
                      <!-- message d'erreur en cas de faut compte -->
                      {% for message in messages %}
                         {{message}}
+                        <a href="{% url 'account:pass_forgeted' %}">Mot de pass oublier</a>
                      {% endfor%}
                 </span>
             </div>
